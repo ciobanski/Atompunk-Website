@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adaugarea fonturilor -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="./Resources/Font/Righteous-Regular.ttf" rel="stylesheet">
+
+    <!-- Implementarea de CSS, Bootstrap si JavaScript -->
+    <link rel="stylesheet" href="./Resources/Styles/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="icon" type="image/png" href="./Resources/icon.png">
+    <title>Utopia Residence</title>
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="topbar text-white py-2" style="background-color: #52753f;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 text-center">
+                    <span class="text-uppercase font-weight-bold">Step into the atomic age and discover your dream home. With sleek designs and lasting quality, invest in your future today.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #b0d1a2;">
+        <a class="navbar-brand" href="#">
+            <img src="./Resources/icon.png" width="30em" alt="Logo"> Utopia Residence
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto justify-content-end flex-nowrap">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+
+
+
+    <!-- Hero -->
+    <section class="hero" style="background-image: url('./Resources/hero.jpg'); ">
+        <div class="text-white message">
+            <h1 class="mb-3">Step into a new age!</h1>
+
+
+        </div>
+    </section>
+    <!-- Scriptul pentru efectul de parallax -->
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const hero = document.querySelector('.hero');
+            let centerX = hero.offsetLeft + hero.offsetWidth / 2;
+            let centerY = hero.offsetTop + hero.offsetHeight / 2;
+            let moveX = (e.pageX - centerX) * 0.02;
+            let moveY = (e.pageY - centerY) * 0.02;
+            hero.style.backgroundPositionX = moveX + 'px';
+            hero.style.backgroundPositionY = moveY + 'px';
+        });
+    </script>
+    <!-- Hero -->
+
+    <!-- Side by side  -->
+    <div class="container-fluid sidebyside" style="background-image: url(./Resources/side.jpg);">
+        <div class="row side1 mx-auto">
+            <div class="col-md-auto">
+                <img src="./Resources/1.jpg" alt="">
+            </div>
+            <div class="col-md-auto ">
+                <div class="read">
+                    Why not indulge yourself and invest in a seaside large retrofuture house? It's not just a purchase, it's a life-changing decision that will bring you joy and fulfillment for years to come. Don't wait any longer, take the leap and make your dream a reality
+                    today!
+
+                    <button class="btn-outline-light rounded readmore">Read more</button>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row side2 mx-auto">
+            <div class="col-md-auto">
+                <img src="./Resources/2.png" alt="">
+            </div>
+            <div class="col-md-auto">
+                <img src="./Resources/3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Contact -->
+
+    <section class="mb-4 contact" style="background-image: url(./Resources/contact.jpg);">
+        <div class="contact2">
+
+            <h2 class="h1-responsive font-weight-bold text-center my-4 ">Contact us</h2>
+
+
+            <div class="col-md-4 mb-md-0 mx-auto text-center ">
+                <form id="contact-form " name="contact-form " action="mail.php " method="POST ">
+
+                    <div class="row justify-content-center ">
+
+                        <div class="col-md-6 ">
+                            <div class="md-form mb-0 ">
+                                <input type="text " id="name " name="name " class="form-control inp">
+                                <label for="name " class=" ">Your name</label>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="row justify-content-center " ">
+                    <div class="col-md-6 ">
+                        <div class="md-form mb-0 ">
+                            <input type="text " id="email " name="email " class="form-control inp ">
+                            <label for="email " class=" ">Your email</label>
+                        </div>
+                    </div>
+                </div>
+    
+                
+                <div class="row justify-content-center ">
+                    <div class="col-md-6 ">
+                        <div class="md-form mb-0 ">
+                            <input type="tel " id="subject " name="subject " class="form-control inp ">
+                            <label for="subject " class=" ">Phone number</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row ">
+    
+                    
+                    <div class="col-md-12 ">
+    
+    
+                    </div>
+                </div>
+                
+    
+                </form>
+    
+                <div class="text-center text-md-center ">
+                    <a class="btn send " onclick="document.getElementById( 'contact-form').submit(); ">Send</a>
+                </div>
+                <div class="status "></div>
+            </div>
+            
+            <div class="col-md-3 text-center mx-auto ">
+                <ul class="list-unstyled mb-0 ">
+    
+    
+                    <li><i class="fas fa-phone mt-4 fa-2x "></i>
+                        <p>+66 234 19348583</p>
+                    </li>
+    
+                    <li><i class="fas fa-envelope mt-4 fa-2x "></i>
+                        <p>contact@utopiaresidence.com</p>
+                    </li>
+                    <li><i class="fas fa-map-pin mt-4 fa-2x "></i>
+                        <p>Satpaev St 97, Jezqazğan 100000, Kazakhstan</p>
+                    </li>
+                </ul>
+            </div>
+           
+    
+        </div>
+    
+        </section>
+        <!-- Contact -->
+        <!-- Harta embedded -->
+        <iframe style="filter:brightness(75%) " src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10724.707666751683!2d67.70004735475156!3d47.778017397640426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sro!4v1682848931343!5m2!1sen!2sro "
+                        width="100% " height="450 " style="border:0; align-items: center; " allowfullscreen=" " loading="lazy " referrerpolicy="no-referrer-when-downgrade ">
+                        </iframe>
+                    </div>
+
+                    <!-- Footer -->
+
+                    <footer class="text-center text-dark ">
+                        <!-- Grid container -->
+                        <div class="container p-4 pb-0 ">
+                            <!-- Section: Social media -->
+                            <section class="mb-auto ">
+                                <!-- Facebook -->
+                                <a class="btn btn-outline-dark btn-floating m-1 " href="#! " role="button "><i class="fab fa-facebook-f "></i
+            ></a>
+
+                                <!-- Twitter -->
+                                <a class="btn btn-outline-dark btn-floating m-1 " href="#! " role="button "><i class="fab fa-twitter "></i
+            ></a>
+
+                                <!-- Google -->
+                                <a class="btn btn-outline-dark btn-floating m-1 " href="#! " role="button "><i class="fab fa-google "></i
+            ></a>
+
+                                <!-- Instagram -->
+                                <a class="btn btn-outline-dark btn-floating m-1 " href="#! " role="button "><i class="fab fa-instagram "></i
+            ></a>
+
+                                <!-- Linkedin -->
+                                <a class="btn btn-outline-dark btn-floating m-1 " href="#! " role="button "><i class="fab fa-linkedin-in "></i
+            ></a>
+
+                                <!-- Github -->
+                                <a class="btn btn-outline-dark btn-floating m-1 " href="#! " role="button "><i class="fab fa-github "></i
+            ></a>
+                            </section>
+                            <!-- Section: Social media -->
+                        </div>
+                        <!-- Grid container -->
+
+                        <!-- Copyright -->
+                        <div class="text-center p-3 " style="background-color: rgba(0, 0, 0, 0.2); ">
+                            © 2023 Copyright: Daniel Ciobanu
+
+                        </div>
+                        <!-- Copyright -->
+                    </footer>
+
+
+
+
+                    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js "></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js "></script>
+                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "></script>
+</body>
+
+</html>

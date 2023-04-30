@@ -1,0 +1,99 @@
+/* Adaugarea de font */
+
+* {
+    font-family: Righteous;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "Righteous";
+    src: url('../Font/Righteous-Regular.ttf');
+}
+
+
+/* Pozitionare si editare aspect elemente din pagina */
+
+.contact {
+    background-attachment: fixed;
+    color: rgb(240, 233, 233);
+}
+
+.contact2 {
+    margin: 30px;
+    background-color: rgba(1, 1, 1, 0.55);
+    border-radius: 10px;
+}
+
+.side1 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.side2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.read {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    text-shadow: 50px;
+    color: rgb(255, 255, 255);
+}
+
+.form-control {
+    border-color: midnightblue !important;
+}
+
+.send {
+    border-color: midnightblue !important;
+}
+
+.send:hover {
+    background-color: midnightblue;
+    color: bisque !important;
+}
+
+footer {
+    background-color: bisque;
+}
+
+.my-4 {
+    overflow-y: hidden;
+}
+
+.hero {
+    background-color: teal;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* Query pentru a face site-ul mai responsiv */
+
+@media screen and (max-width: 530px) {
+    img {
+        max-width: 100%;
+    }
+    .read {
+        max-width: 100%;
+    }
+    .hero .text-white {
+        text-align: center;
+    }
+}
